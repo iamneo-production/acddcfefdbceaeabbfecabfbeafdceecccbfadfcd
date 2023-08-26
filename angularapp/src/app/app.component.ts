@@ -17,9 +17,9 @@ export class AppComponent {
     toCurrency: ['']
   })
   onSubmitt() {
-    this.amount=this.CurrencyForm.get('amount').value;  
-    this.fromCurrency=this.CurrencyForm.get('fromCurrency').value;
-    this.toCurrency=this.CurrencyForm.get('toCurrency').value;
+    this.amount=this.CurrencyForm.get('amount')!.value;  
+    this.fromCurrency=this.CurrencyForm.get('fromCurrency')!.value;
+    this.toCurrency=this.CurrencyForm.get('toCurrency')!.value;
     this.resValue=(this.toCurrency/this.fromCurrency)*this.amount;
     this.resValue=Math.round(this.resValue);
     this.resValue=parseFloat(this.resValue).toFixed(2);
